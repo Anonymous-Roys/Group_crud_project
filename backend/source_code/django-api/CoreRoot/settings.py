@@ -43,9 +43,6 @@ INSTALLED_APPS = [
     'core',
     'core.user',
     'core.auth',
-    'ecommerce',
-    'ecommerce.Product',
-    'ecommerce.General'
 ]
 
 MIDDLEWARE = [
@@ -63,10 +60,9 @@ AUTH_USER_MODEL = 'core_user.User'
 ROOT_URLCONF = 'CoreRoot.urls'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',),
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-}
+    'DEFAULT_AUTHENTICATION_CLASSES':('rest_framework_simplejwt.authentication.JWTAuthentication',),
+    'DEFAULT_FILTER_BACKENDS':('django_filters.rest_framework.DjangoFilterBackend',),
+    }
 
 TEMPLATES = [
     {
